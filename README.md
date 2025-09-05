@@ -1,12 +1,46 @@
-# React + Vite
+## Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Task Manager application built with React, Redux Toolkit, React Router, and Tailwind CSS.
+It was developed as part of the Frontend Programming final exam to demonstrate modern React concepts,
+state management, role-based authentication, asynchronous API integration, and reusable UI components.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clone or download the repository, then run:
 
-## Expanding the ESLint configuration
+npm install
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The app will be available at [http://localhost:5173](http://localhost:5173/).
+
+Test accounts:
+
+- Admin → username: admin, password: admin123
+- User → username: user, password: user123
+
+## Features
+
+- Tasks
+    - List of tasks with search, filters (all/completed/pending), and client-side pagination
+    - Task detail page at /task/:id
+    - Add, Edit, and Delete tasks with validation
+    - Loading spinners during API calls
+- Authentication
+    - Fake login system with two roles: admin and user
+    - Protected routes for profile and admin dashboard
+- Users
+    - Profile page for updating username
+    - Admin dashboard to manage users (add, delete, assign roles)
+- Styling
+    - Responsive UI with Tailwind CSS
+    - Dark mode toggle
+    - Colored status badges for tasks
+
+## Tech
+
+- React 18 (JavaScript + SWC, via Vite)
+- Redux Toolkit for global state
+- Redux Thunk for async actions
+- React Router for navigation and dynamic routes
+- Tailwind CSS for responsive styling
+- JSONPlaceholder API for fetching tasks
